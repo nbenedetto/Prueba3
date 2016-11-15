@@ -1,0 +1,21 @@
+
+		<form name="FormAltaProducto" method=post novalidate>
+
+		<p>
+			<input type="text" name="descripcion" ng-model="producto.descripcion" placeholder="ingrese Descripcion" required>
+			<br/>
+			<span ng-show="FormAltaProducto.descripcion.$error.required">La descripcion es requerida</span>
+		</p>
+
+		<p>
+			<label>Precio:</label><br>
+			<input type="float" name="precio" ng-model="producto.precio" value="Masculino" required><br>
+			<span ng-show="FormAltaProducto.precio.$error.required">El precio es requerido</span>
+		</p>
+
+
+		<p>
+		  <a class="btn btn-info " ng-disabled="FormAltaProducto.$dirty && FormAltaProducto.$invalid" ng-click="Registrar()" ><span class="glyphicon glyphicon-save">&nbsp;</span>Alta</a>
+		</p>
+
+		</form>
